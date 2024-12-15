@@ -1,5 +1,5 @@
 # Data dictionary 
-- symbol:
+- symbol:<br>
   The stock ticker's symbol (e.g., Airbnb, Booking).
 - date:
   The date for the start of the aggregate window.
