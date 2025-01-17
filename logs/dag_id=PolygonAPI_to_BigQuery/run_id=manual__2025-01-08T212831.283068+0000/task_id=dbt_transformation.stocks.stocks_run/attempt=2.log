@@ -1,0 +1,49 @@
+[2025-01-08T21:35:10.667+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run manual__2025-01-08T21:28:31.283068+00:00 [queued]>
+[2025-01-08T21:35:10.679+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run manual__2025-01-08T21:28:31.283068+00:00 [queued]>
+[2025-01-08T21:35:10.679+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-08T21:35:10.680+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2025-01-08T21:35:10.680+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-08T21:35:10.696+0000] {taskinstance.py:1300} INFO - Executing <Task(DbtRunLocalOperator): dbt_transformation.stocks.stocks_run> on 2025-01-08 21:28:31.283068+00:00
+[2025-01-08T21:35:10.700+0000] {standard_task_runner.py:55} INFO - Started process 5093 to run task
+[2025-01-08T21:35:10.703+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'dbt_transformation.stocks.stocks_run', 'manual__2025-01-08T21:28:31.283068+00:00', '--job-id', '586', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmpem7jvk7t']
+[2025-01-08T21:35:10.704+0000] {standard_task_runner.py:83} INFO - Job 586: Subtask dbt_transformation.stocks.stocks_run
+[2025-01-08T21:35:10.776+0000] {task_command.py:388} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run manual__2025-01-08T21:28:31.283068+00:00 [running]> on host a92a1c4ce849
+[2025-01-08T21:35:10.852+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=PolygonAPI_to_BigQuery
+AIRFLOW_CTX_TASK_ID=dbt_transformation.stocks.stocks_run
+AIRFLOW_CTX_EXECUTION_DATE=2025-01-08T21:28:31.283068+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-01-08T21:28:31.283068+00:00
+[2025-01-08T21:35:10.854+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:10,853[0m] {[34mlocal.py:[0m146} INFO[0m - [33m(astronomer-cosmos)[0m - Cloning project to writable temp directory /tmp/tmppjelh572 from /opt/***/dbt/dbt_stock_project[0m
+[2025-01-08T21:35:11.415+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:11,415[0m] {[34mconfig.py:[0m139} INFO[0m - [33m(astronomer-cosmos)[0m - Using user-supplied profiles.yml at /opt/***/dbt/profiles/profiles.yml[0m
+[2025-01-08T21:35:11.416+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:11,416[0m] {[34mlocal.py:[0m176} INFO[0m - [33m(astronomer-cosmos)[0m - Trying to run the command:
+ ['/opt/.venv/Scripts/dbt.exe', 'run', '--models', 'stocks', '--profiles-dir', '/opt/***/dbt/profiles', '--profile', 'default', '--target', 'dev']
+From /tmp/tmppjelh572/dbt_project[0m
+[2025-01-08T21:35:11.418+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:11,416[0m] {[34mlocal.py:[0m177} INFO[0m - [33m(astronomer-cosmos)[0m - Using environment variables keys: dict_keys(['AIRFLOW_CTX_DAG_OWNER', 'AIRFLOW_CTX_DAG_ID', 'AIRFLOW_CTX_TASK_ID', 'AIRFLOW_CTX_EXECUTION_DATE', 'AIRFLOW_CTX_TRY_NUMBER', 'AIRFLOW_CTX_DAG_RUN_ID'])[0m
+[2025-01-08T21:35:11.419+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:11,419[0m] {[34msubprocess.py:[0m60} INFO[0m - [33m(astronomer-cosmos)[0m - Tmp dir root location: 
+ /tmp[0m
+[2025-01-08T21:35:11.420+0000] {log.py:232} WARNING - [[34m2025-01-08 21:35:11,419[0m] {[34msubprocess.py:[0m73} INFO[0m - [33m(astronomer-cosmos)[0m - Running command: ['/opt/.venv/Scripts/dbt.exe', 'run', '--models', 'stocks', '--profiles-dir', '/opt/***/dbt/profiles', '--profile', 'default', '--target', 'dev'][0m
+[2025-01-08T21:35:11.434+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 282, in execute
+    result = self.build_and_run_cmd(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 194, in build_and_run_cmd
+    return self.run_command(cmd=dbt_cmd, env=env, context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 182, in run_command
+    cwd=tmp_project_dir,
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 130, in run_subprocess
+    subprocess_result: FullOutputSubprocessResult = self.subprocess_hook.run_command(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/hooks/subprocess.py", line 81, in run_command
+    preexec_fn=pre_exec,
+  File "/usr/local/lib/python3.7/subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "/usr/local/lib/python3.7/subprocess.py", line 1551, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/.venv/Scripts/dbt.exe': '/opt/.venv/Scripts/dbt.exe'
+[2025-01-08T21:35:11.450+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=PolygonAPI_to_BigQuery, task_id=dbt_transformation.stocks.stocks_run, execution_date=20250108T212831, start_date=20250108T213510, end_date=20250108T213511
+[2025-01-08T21:35:11.470+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 586 for task dbt_transformation.stocks.stocks_run ([Errno 2] No such file or directory: '/opt/.venv/Scripts/dbt.exe': '/opt/.venv/Scripts/dbt.exe'; 5093)
+[2025-01-08T21:35:11.517+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-01-08T21:35:11.550+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

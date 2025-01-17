@@ -1,0 +1,88 @@
+[2025-01-13T00:23:44.212+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.run scheduled__2025-01-12T00:00:00+00:00 [queued]>
+[2025-01-13T00:23:44.220+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.run scheduled__2025-01-12T00:00:00+00:00 [queued]>
+[2025-01-13T00:23:44.221+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2025-01-13T00:23:44.235+0000] {taskinstance.py:1382} INFO - Executing <Task(DbtRunLocalOperator): dbt_transformation.stocks.run> on 2025-01-12 00:00:00+00:00
+[2025-01-13T00:23:44.241+0000] {standard_task_runner.py:57} INFO - Started process 4898 to run task
+[2025-01-13T00:23:44.244+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'dbt_transformation.stocks.run', 'scheduled__2025-01-12T00:00:00+00:00', '--job-id', '270', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmpf7h0n25m']
+[2025-01-13T00:23:44.247+0000] {standard_task_runner.py:85} INFO - Job 270: Subtask dbt_transformation.stocks.run
+[2025-01-13T00:23:44.339+0000] {task_command.py:415} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.run scheduled__2025-01-12T00:00:00+00:00 [running]> on host 8e83bd89ed82
+[2025-01-13T00:23:44.616+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='PolygonAPI_to_BigQuery' AIRFLOW_CTX_TASK_ID='dbt_transformation.stocks.run' AIRFLOW_CTX_EXECUTION_DATE='2025-01-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-12T00:00:00+00:00'
+[2025-01-13T00:23:47.034+0000] {local.py:220} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2025-01-13T00:23:47.035+0000] {local.py:436} INFO - Cloning project to writable temp directory /tmp/tmpn8uwal91 from /opt/airflow/dbt/dbt_stock_project
+[2025-01-13T00:23:47.041+0000] {local.py:447} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/PolygonAPI_to_BigQuery__dbt_transformation/target/partial_parse.msgpack
+[2025-01-13T00:23:47.049+0000] {config.py:342} INFO - Using user-supplied profiles.yml at /opt/***/dbt/profiles/profiles.yml
+[2025-01-13T00:23:47.050+0000] {local.py:408} INFO - Trying to run dbtRunner with:
+ ['run', '--models', 'stocks', '--project-dir', '/tmp/tmpn8uwal91', '--profiles-dir', '/opt/***/dbt/profiles', '--profile', 'default', '--target', 'dev']
+ in /tmp/tmpn8uwal91
+[2025-01-13T00:23:47.092+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.090637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416cfdf8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4167f3b4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4167f3b640>]}
+[2025-01-13T00:23:47.093+0000] {logging_mixin.py:151} INFO - 00:23:47  Running with dbt=1.5.11
+[2025-01-13T00:23:47.093+0000] {eventmgr.py:62} INFO - [0m00:23:47  Running with dbt=1.5.11
+[2025-01-13T00:23:47.094+0000] {eventmgr.py:62} INFO - 
+
+============================== 00:23:47.093314 | af51049e-c255-431d-8df3-74c7e52168f1 ==============================
+[0m00:23:47.093314 [info ] [MainThread]: Running with dbt=1.5.11
+[2025-01-13T00:23:47.096+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.095679 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/***/dbt/profiles', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/tmpn8uwal91/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[2025-01-13T00:23:47.461+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.460908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'af51049e-c255-431d-8df3-74c7e52168f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4167f329a0>]}
+[2025-01-13T00:23:47.500+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.500397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'af51049e-c255-431d-8df3-74c7e52168f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4167f32a60>]}
+[2025-01-13T00:23:47.502+0000] {logging_mixin.py:151} INFO - 00:23:47  Registered adapter: bigquery=1.5.9
+[2025-01-13T00:23:47.502+0000] {eventmgr.py:62} INFO - [0m00:23:47  Registered adapter: bigquery=1.5.9
+[2025-01-13T00:23:47.503+0000] {eventmgr.py:62} INFO - [0m00:23:47.501937 [info ] [MainThread]: Registered adapter: bigquery=1.5.9
+[2025-01-13T00:23:47.534+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.533749 [debug] [MainThread]: checksum: f14fb70d4f628ddd6946249d2976132253e920cfc3d8f34b2f21b58b69b506a6, vars: {}, profile: default, target: dev, version: 1.5.11
+[2025-01-13T00:23:47.698+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.698227 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[2025-01-13T00:23:47.700+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.699664 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[2025-01-13T00:23:47.710+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.710178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'af51049e-c255-431d-8df3-74c7e52168f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165f0ceb0>]}
+[2025-01-13T00:23:47.723+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.722819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'af51049e-c255-431d-8df3-74c7e52168f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165f71cd0>]}
+[2025-01-13T00:23:47.724+0000] {logging_mixin.py:151} INFO - 00:23:47  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T00:23:47.724+0000] {eventmgr.py:62} INFO - [0m00:23:47  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T00:23:47.725+0000] {eventmgr.py:62} INFO - [0m00:23:47.724116 [info ] [MainThread]: Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T00:23:47.727+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.726739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af51049e-c255-431d-8df3-74c7e52168f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165f71d90>]}
+[2025-01-13T00:23:47.729+0000] {logging_mixin.py:151} INFO - 00:23:47
+[2025-01-13T00:23:47.729+0000] {eventmgr.py:62} INFO - [0m00:23:47  
+[2025-01-13T00:23:47.730+0000] {eventmgr.py:62} INFO - [0m00:23:47.728928 [info ] [MainThread]: 
+[2025-01-13T00:23:47.732+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.732031 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[2025-01-13T00:23:47.734+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.734337 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_stock-market-elt'
+[2025-01-13T00:23:47.735+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.735540 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[2025-01-13T00:23:47.738+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.737748 [debug] [ThreadPool]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json''
+[2025-01-13T00:23:47.740+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.740304 [debug] [MainThread]: Connection 'master' was properly closed.
+[2025-01-13T00:23:47.741+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.741496 [debug] [MainThread]: Connection 'list_stock-market-elt' was properly closed.
+[2025-01-13T00:23:47.743+0000] {logging_mixin.py:151} INFO - 00:23:47
+[2025-01-13T00:23:47.742+0000] {eventmgr.py:62} INFO - [0m00:23:47  
+[2025-01-13T00:23:47.744+0000] {eventmgr.py:62} INFO - [0m00:23:47.742604 [info ] [MainThread]: 
+[2025-01-13T00:23:47.745+0000] {logging_mixin.py:151} INFO - 00:23:47  Finished running  in 0 hours 0 minutes and 0.01 seconds (0.01s).
+[2025-01-13T00:23:47.745+0000] {eventmgr.py:62} INFO - [0m00:23:47  Finished running  in 0 hours 0 minutes and 0.01 seconds (0.01s).
+[2025-01-13T00:23:47.746+0000] {eventmgr.py:62} INFO - [0m00:23:47.745018 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.01 seconds (0.01s).
+[2025-01-13T00:23:47.748+0000] {logging_mixin.py:151} INFO - 00:23:47  Encountered an error:
+Database Error
+  [Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json'
+[2025-01-13T00:23:47.748+0000] {eventmgr.py:66} ERROR - [0m00:23:47  Encountered an error:
+Database Error
+  [Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json'
+[2025-01-13T00:23:47.749+0000] {eventmgr.py:66} ERROR - [0m00:23:47.747634 [error] [MainThread]: Encountered an error:
+Database Error
+  [Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json'
+[2025-01-13T00:23:47.750+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.750427 [debug] [MainThread]: Command `cli run` failed at 00:23:47.750265 after 0.69 seconds
+[2025-01-13T00:23:47.752+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.751599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416cfdf8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4166025d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4166025cd0>]}
+[2025-01-13T00:23:47.753+0000] {eventmgr.py:60} DEBUG - [0m00:23:47.752979 [debug] [MainThread]: Flushing usage events
+[2025-01-13T00:23:54.670+0000] {local.py:86} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v9.json is above dbt-ol supported version 7. This might cause errors.
+[2025-01-13T00:23:54.671+0000] {local.py:494} INFO - Inlets: []
+[2025-01-13T00:23:54.671+0000] {local.py:495} INFO - Outlets: []
+[2025-01-13T00:23:54.672+0000] {local.py:595} INFO - Assigning inlets/outlets without DatasetAlias
+[2025-01-13T00:23:54.672+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-01-13T00:23:54.830+0000] {dag.py:3677} INFO - Setting next_dagrun for PolygonAPI_to_BigQuery to 2025-01-13T00:00:00+00:00, run_after=2025-01-14T00:00:00+00:00
+[2025-01-13T00:23:54.869+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/cosmos/operators/base.py", line 268, in execute
+    self.build_and_run_cmd(context=context, cmd_flags=self.add_cmd_flags())
+  File "/home/airflow/.local/lib/python3.8/site-packages/cosmos/operators/local.py", line 654, in build_and_run_cmd
+    result = self.run_command(cmd=dbt_cmd, env=env, context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/cosmos/operators/local.py", line 509, in run_command
+    self.handle_exception(result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/cosmos/operators/local.py", line 233, in handle_exception_dbt_runner
+    raise AirflowException(f"dbt invocation did not complete with unhandled error: {result.exception}")
+airflow.exceptions.AirflowException: dbt invocation did not complete with unhandled error: Database Error
+  [Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json'
+[2025-01-13T00:23:54.872+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=PolygonAPI_to_BigQuery, task_id=dbt_transformation.stocks.run, execution_date=20250112T000000, start_date=20250113T002344, end_date=20250113T002354
+[2025-01-13T00:23:54.884+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 270 for task dbt_transformation.stocks.run (dbt invocation did not complete with unhandled error: Database Error
+  [Errno 2] No such file or directory: '/opt/***/stock-market-elt-key.json'; 4898)
+[2025-01-13T00:23:54.921+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-01-13T00:23:54.948+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

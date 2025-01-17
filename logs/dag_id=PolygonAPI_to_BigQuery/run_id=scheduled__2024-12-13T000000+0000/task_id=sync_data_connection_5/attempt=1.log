@@ -1,0 +1,63 @@
+[2024-12-14T11:44:19.608+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_5 scheduled__2024-12-13T00:00:00+00:00 [queued]>
+[2024-12-14T11:44:19.635+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_5 scheduled__2024-12-13T00:00:00+00:00 [queued]>
+[2024-12-14T11:44:19.636+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-14T11:44:19.639+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-12-14T11:44:19.640+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-14T11:44:19.724+0000] {taskinstance.py:1300} INFO - Executing <Task(AirbyteTriggerSyncOperator): sync_data_connection_5> on 2024-12-13 00:00:00+00:00
+[2024-12-14T11:44:19.730+0000] {standard_task_runner.py:55} INFO - Started process 86 to run task
+[2024-12-14T11:44:19.737+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'sync_data_connection_5', 'scheduled__2024-12-13T00:00:00+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmp_nia08wd']
+[2024-12-14T11:44:19.740+0000] {standard_task_runner.py:83} INFO - Job 94: Subtask sync_data_connection_5
+[2024-12-14T11:44:19.898+0000] {task_command.py:388} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_5 scheduled__2024-12-13T00:00:00+00:00 [running]> on host 1b9e534b4855
+[2024-12-14T11:44:20.101+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=PolygonAPI_to_BigQuery
+AIRFLOW_CTX_TASK_ID=sync_data_connection_5
+AIRFLOW_CTX_EXECUTION_DATE=2024-12-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-12-13T00:00:00+00:00
+[2024-12-14T11:44:20.131+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:30.361+0000] {airbyte.py:77} INFO - Job 73 was submitted to Airbyte Server
+[2024-12-14T11:44:30.362+0000] {airbyte.py:79} INFO - Waiting for job 73 to complete
+[2024-12-14T11:44:33.382+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:36.475+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:39.569+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:42.778+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:45.994+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:49.200+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:52.284+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:55.459+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:44:58.645+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:01.879+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:04.959+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:08.054+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:11.124+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:14.161+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:17.193+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:20.245+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:23.363+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:26.467+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:29.533+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:32.588+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:35.646+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:38.711+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:41.814+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:44.884+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:47.944+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:51.006+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:54.048+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:45:57.107+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:00.185+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:03.235+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:06.289+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:09.348+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:12.475+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:15.534+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:18.568+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:21.600+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:24.646+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-14T11:46:24.692+0000] {airbyte.py:81} INFO - Job 73 completed successfully
+[2024-12-14T11:46:24.797+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=PolygonAPI_to_BigQuery, task_id=sync_data_connection_5, execution_date=20241213T000000, start_date=20241214T114419, end_date=20241214T114624
+[2024-12-14T11:46:24.947+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-12-14T11:46:25.016+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,48 @@
+[2024-12-05T13:41:58.977+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.sync_polygon_data scheduled__2024-12-05T12:00:00+00:00 [queued]>
+[2024-12-05T13:41:59.009+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.sync_polygon_data scheduled__2024-12-05T12:00:00+00:00 [queued]>
+[2024-12-05T13:41:59.010+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-05T13:41:59.012+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-12-05T13:41:59.013+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-12-05T13:41:59.111+0000] {taskinstance.py:1300} INFO - Executing <Task(AirbyteTriggerSyncOperator): sync_polygon_data> on 2024-12-05 12:00:00+00:00
+[2024-12-05T13:41:59.136+0000] {standard_task_runner.py:55} INFO - Started process 38189 to run task
+[2024-12-05T13:41:59.142+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'sync_polygon_data', 'scheduled__2024-12-05T12:00:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_BigQuery_sync.py', '--cfg-path', '/tmp/tmp0qmtdsj8']
+[2024-12-05T13:41:59.145+0000] {standard_task_runner.py:83} INFO - Job 69: Subtask sync_polygon_data
+[2024-12-05T13:41:59.811+0000] {task_command.py:388} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.sync_polygon_data scheduled__2024-12-05T12:00:00+00:00 [running]> on host 1b9e534b4855
+[2024-12-05T13:42:05.759+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=PolygonAPI_to_BigQuery
+AIRFLOW_CTX_TASK_ID=sync_polygon_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-12-05T12:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-12-05T12:00:00+00:00
+[2024-12-05T13:42:05.823+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2024-12-05T13:42:06.128+0000] {http.py:163} ERROR - HTTP error: Conflict
+[2024-12-05T13:42:06.141+0000] {http.py:164} ERROR - {"message":"A sync is already running for: 4c1c7be9-d8be-4b35-b903-bcbd42dee963","exceptionClassName":"io.airbyte.commons.server.errors.ValueConflictKnownException","exceptionStack":["io.airbyte.commons.server.errors.ValueConflictKnownException: A sync is already running for: 4c1c7be9-d8be-4b35-b903-bcbd42dee963","\tat io.airbyte.commons.server.handlers.SchedulerHandler.readJobFromResult(SchedulerHandler.java:694)","\tat io.airbyte.commons.server.handlers.SchedulerHandler.submitManualSyncToWorker(SchedulerHandler.java:664)","\tat io.airbyte.commons.server.handlers.SchedulerHandler.syncConnection(SchedulerHandler.java:516)","\tat io.airbyte.server.apis.ConnectionApiController.lambda$syncConnection$8(ConnectionApiController.java:133)","\tat io.airbyte.server.apis.ApiHelper.execute(ApiHelper.java:26)","\tat io.airbyte.server.apis.ConnectionApiController.syncConnection(ConnectionApiController.java:133)","\tat io.airbyte.server.apis.$ConnectionApiController$Definition$Exec.dispatch(Unknown Source)","\tat io.micronaut.context.AbstractExecutableMethodsDefinition$DispatchedExecutableMethod.invoke(AbstractExecutableMethodsDefinition.java:371)","\tat io.micronaut.context.DefaultBeanContext$4.invoke(DefaultBeanContext.java:594)","\tat io.micronaut.web.router.AbstractRouteMatch.execute(AbstractRouteMatch.java:303)","\tat io.micronaut.web.router.RouteMatch.execute(RouteMatch.java:111)","\tat io.micronaut.http.context.ServerRequestContext.with(ServerRequestContext.java:103)","\tat io.micronaut.http.server.RouteExecutor.lambda$executeRoute$14(RouteExecutor.java:659)","\tat reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:49)","\tat reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)","\tat reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.run(FluxSubscribeOn.java:194)","\tat io.micronaut.reactive.reactor.instrument.ReactorInstrumentation.lambda$init$0(ReactorInstrumentation.java:62)","\tat reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84)","\tat reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37)","\tat io.micronaut.scheduling.instrument.InvocationInstrumenterWrappedCallable.call(InvocationInstrumenterWrappedCallable.java:53)","\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)","\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)","\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)","\tat java.base/java.lang.Thread.run(Thread.java:1589)"]}
+[2024-12-05T13:42:06.166+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 161, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: http://host.docker.internal:8000/api/v1/connections/sync
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/operators/airbyte.py", line 74, in execute
+    job_object = self.hook.submit_sync_connection(connection_id=self.connection_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 95, in submit_sync_connection
+    headers={"accept": "application/json"},
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 151, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 204, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 165, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 409:Conflict
+[2024-12-05T13:42:06.592+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=PolygonAPI_to_BigQuery, task_id=sync_polygon_data, execution_date=20241205T120000, start_date=20241205T134158, end_date=20241205T134206
+[2024-12-05T13:42:06.639+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 69 for task sync_polygon_data (409:Conflict; 38189)
+[2024-12-05T13:42:06.665+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-12-05T13:42:06.707+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

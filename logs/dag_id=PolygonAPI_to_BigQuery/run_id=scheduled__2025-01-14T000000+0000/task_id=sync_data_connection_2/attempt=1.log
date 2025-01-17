@@ -1,0 +1,47 @@
+[2025-01-15T03:05:26.270+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_2 scheduled__2025-01-14T00:00:00+00:00 [queued]>
+[2025-01-15T03:05:26.282+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_2 scheduled__2025-01-14T00:00:00+00:00 [queued]>
+[2025-01-15T03:05:26.283+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-01-15T03:05:26.308+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteTriggerSyncOperator): sync_data_connection_2> on 2025-01-14 00:00:00+00:00
+[2025-01-15T03:05:26.321+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2025-01-15T03:05:26.328+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'sync_data_connection_2', 'scheduled__2025-01-14T00:00:00+00:00', '--job-id', '366', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmpnivlu3r2']
+[2025-01-15T03:05:26.336+0000] {standard_task_runner.py:85} INFO - Job 366: Subtask sync_data_connection_2
+[2025-01-15T03:05:26.419+0000] {task_command.py:415} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_2 scheduled__2025-01-14T00:00:00+00:00 [running]> on host a7a323ab681c
+[2025-01-15T03:05:26.976+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='PolygonAPI_to_BigQuery' AIRFLOW_CTX_TASK_ID='sync_data_connection_2' AIRFLOW_CTX_EXECUTION_DATE='2025-01-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-14T00:00:00+00:00'
+[2025-01-15T03:05:26.994+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:36.336+0000] {airbyte.py:95} INFO - Job 339 was submitted to Airbyte Server
+[2025-01-15T03:05:36.337+0000] {airbyte.py:97} INFO - Waiting for job 339 to complete
+[2025-01-15T03:05:39.360+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:42.519+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:45.575+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:48.664+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:51.900+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:55.194+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:05:58.324+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:01.437+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:04.483+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:07.570+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:11.383+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:14.440+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:17.499+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:20.555+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:23.626+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:26.685+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:29.738+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:32.785+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:35.831+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:38.882+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:41.909+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:44.942+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:47.969+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:50.996+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:54.025+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:06:57.050+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:00.079+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:03.109+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:06.137+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:09.165+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:12.190+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-15T03:07:12.214+0000] {airbyte.py:124} INFO - Job 339 completed successfully
+[2025-01-15T03:07:12.241+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=PolygonAPI_to_BigQuery, task_id=sync_data_connection_2, execution_date=20250114T000000, start_date=20250115T030526, end_date=20250115T030712
+[2025-01-15T03:07:12.283+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-01-15T03:07:12.315+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

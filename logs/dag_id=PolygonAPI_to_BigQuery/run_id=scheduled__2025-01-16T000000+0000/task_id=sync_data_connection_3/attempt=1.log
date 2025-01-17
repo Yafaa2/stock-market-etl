@@ -1,0 +1,23 @@
+[2025-01-17T17:58:16.061+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_3 scheduled__2025-01-16T00:00:00+00:00 [queued]>
+[2025-01-17T17:58:16.098+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_3 scheduled__2025-01-16T00:00:00+00:00 [queued]>
+[2025-01-17T17:58:16.099+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-01-17T17:58:16.181+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteTriggerSyncOperator): sync_data_connection_3> on 2025-01-16 00:00:00+00:00
+[2025-01-17T17:58:16.200+0000] {standard_task_runner.py:57} INFO - Started process 12258 to run task
+[2025-01-17T17:58:16.205+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'sync_data_connection_3', 'scheduled__2025-01-16T00:00:00+00:00', '--job-id', '380', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmp0u_p5pa8']
+[2025-01-17T17:58:16.221+0000] {standard_task_runner.py:85} INFO - Job 380: Subtask sync_data_connection_3
+[2025-01-17T17:58:16.486+0000] {task_command.py:415} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_3 scheduled__2025-01-16T00:00:00+00:00 [running]> on host a7a323ab681c
+[2025-01-17T17:58:17.716+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='PolygonAPI_to_BigQuery' AIRFLOW_CTX_TASK_ID='sync_data_connection_3' AIRFLOW_CTX_EXECUTION_DATE='2025-01-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-16T00:00:00+00:00'
+[2025-01-17T17:58:17.756+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:21.171+0000] {airbyte.py:95} INFO - Job 347 was submitted to Airbyte Server
+[2025-01-17T17:58:21.172+0000] {airbyte.py:97} INFO - Waiting for job 347 to complete
+[2025-01-17T17:58:24.192+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:27.269+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:30.313+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:33.366+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:36.433+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:39.487+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:42.569+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:45.661+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:48.713+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:58:51.763+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-17T17:59:01.776+0000] {http.py:221} WARNING - HTTPConnectionPool(host='host.docker.internal', port=8000): Max retries exceeded with url: /api/v1/jobs/get (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb7c75eb550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')) Tenacity will retry to execute the operation

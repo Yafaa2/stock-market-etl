@@ -1,0 +1,170 @@
+[2025-01-13T03:18:40.204+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.test manual__2025-01-13T03:16:41.980477+00:00 [queued]>
+[2025-01-13T03:18:40.213+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.test manual__2025-01-13T03:16:41.980477+00:00 [queued]>
+[2025-01-13T03:18:40.213+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-01-13T03:18:40.226+0000] {taskinstance.py:1382} INFO - Executing <Task(DbtTestLocalOperator): dbt_transformation.stocks.test> on 2025-01-13 03:16:41.980477+00:00
+[2025-01-13T03:18:40.232+0000] {standard_task_runner.py:57} INFO - Started process 310 to run task
+[2025-01-13T03:18:40.235+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'dbt_transformation.stocks.test', 'manual__2025-01-13T03:16:41.980477+00:00', '--job-id', '353', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmpssnohx4j']
+[2025-01-13T03:18:40.239+0000] {standard_task_runner.py:85} INFO - Job 353: Subtask dbt_transformation.stocks.test
+[2025-01-13T03:18:40.284+0000] {task_command.py:415} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.test manual__2025-01-13T03:16:41.980477+00:00 [running]> on host a7a323ab681c
+[2025-01-13T03:18:40.578+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='PolygonAPI_to_BigQuery' AIRFLOW_CTX_TASK_ID='dbt_transformation.stocks.test' AIRFLOW_CTX_EXECUTION_DATE='2025-01-13T03:16:41.980477+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-13T03:16:41.980477+00:00'
+[2025-01-13T03:18:44.125+0000] {local.py:220} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2025-01-13T03:18:44.126+0000] {local.py:436} INFO - Cloning project to writable temp directory /tmp/tmp61hpjfmx from /opt/airflow/dbt/dbt_stock_project
+[2025-01-13T03:18:44.131+0000] {local.py:447} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/PolygonAPI_to_BigQuery__dbt_transformation/target/partial_parse.msgpack
+[2025-01-13T03:18:44.138+0000] {config.py:342} INFO - Using user-supplied profiles.yml at /opt/***/dbt/profiles/profiles.yml
+[2025-01-13T03:18:44.139+0000] {local.py:408} INFO - Trying to run dbtRunner with:
+ ['test', '--models', 'stocks', '--project-dir', '/tmp/tmp61hpjfmx', '--profiles-dir', '/opt/***/dbt/profiles', '--profile', 'default', '--target', 'dev']
+ in /tmp/tmp61hpjfmx
+[2025-01-13T03:18:44.177+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.174751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f52eb1bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f51e579a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f51e57af0>]}
+[2025-01-13T03:18:44.178+0000] {logging_mixin.py:151} INFO - 03:18:44  Running with dbt=1.5.11
+[2025-01-13T03:18:44.178+0000] {eventmgr.py:62} INFO - [0m03:18:44  Running with dbt=1.5.11
+[2025-01-13T03:18:44.180+0000] {eventmgr.py:62} INFO - 
+
+============================== 03:18:44.178266 | a322b4bf-3f26-43bb-81bb-0005918ab53e ==============================
+[0m03:18:44.178266 [info ] [MainThread]: Running with dbt=1.5.11
+[2025-01-13T03:18:44.181+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.181037 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/opt/***/dbt/profiles', 'log_path': '/tmp/tmp61hpjfmx/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[2025-01-13T03:18:44.619+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.618971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f51e7abb0>]}
+[2025-01-13T03:18:44.666+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.666317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4ffb2a00>]}
+[2025-01-13T03:18:44.668+0000] {logging_mixin.py:151} INFO - 03:18:44  Registered adapter: bigquery=1.5.9
+[2025-01-13T03:18:44.668+0000] {eventmgr.py:62} INFO - [0m03:18:44  Registered adapter: bigquery=1.5.9
+[2025-01-13T03:18:44.669+0000] {eventmgr.py:62} INFO - [0m03:18:44.668000 [info ] [MainThread]: Registered adapter: bigquery=1.5.9
+[2025-01-13T03:18:44.700+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.699910 [debug] [MainThread]: checksum: f14fb70d4f628ddd6946249d2976132253e920cfc3d8f34b2f21b58b69b506a6, vars: {}, profile: default, target: dev, version: 1.5.11
+[2025-01-13T03:18:44.825+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.824787 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[2025-01-13T03:18:44.826+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.825975 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[2025-01-13T03:18:44.837+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.837183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4fe4f280>]}
+[2025-01-13T03:18:44.854+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.854472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4fea5070>]}
+[2025-01-13T03:18:44.856+0000] {logging_mixin.py:151} INFO - 03:18:44  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T03:18:44.856+0000] {eventmgr.py:62} INFO - [0m03:18:44  Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T03:18:44.857+0000] {eventmgr.py:62} INFO - [0m03:18:44.855711 [info ] [MainThread]: Found 1 model, 2 tests, 0 snapshots, 0 analyses, 361 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics, 0 groups
+[2025-01-13T03:18:44.858+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.857855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4fea50d0>]}
+[2025-01-13T03:18:44.860+0000] {logging_mixin.py:151} INFO - 03:18:44
+[2025-01-13T03:18:44.860+0000] {eventmgr.py:62} INFO - [0m03:18:44  
+[2025-01-13T03:18:44.861+0000] {eventmgr.py:62} INFO - [0m03:18:44.859932 [info ] [MainThread]: 
+[2025-01-13T03:18:44.863+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.862787 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[2025-01-13T03:18:44.866+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.865880 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_stock-market-elt_stock_data'
+[2025-01-13T03:18:44.867+0000] {eventmgr.py:60} DEBUG - [0m03:18:44.867109 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[2025-01-13T03:18:45.607+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.607218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a322b4bf-3f26-43bb-81bb-0005918ab53e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4ff68fd0>]}
+[2025-01-13T03:18:45.609+0000] {logging_mixin.py:151} INFO - 03:18:45  Concurrency: 4 threads (target='dev')
+[2025-01-13T03:18:45.609+0000] {eventmgr.py:62} INFO - [0m03:18:45  Concurrency: 4 threads (target='dev')
+[2025-01-13T03:18:45.610+0000] {eventmgr.py:62} INFO - [0m03:18:45.609185 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[2025-01-13T03:18:45.612+0000] {logging_mixin.py:151} INFO - 03:18:45
+[2025-01-13T03:18:45.612+0000] {eventmgr.py:62} INFO - [0m03:18:45  
+[2025-01-13T03:18:45.613+0000] {eventmgr.py:62} INFO - [0m03:18:45.611544 [info ] [MainThread]: 
+[2025-01-13T03:18:45.619+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.618653 [debug] [Thread-1  ]: Began running node test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b
+[2025-01-13T03:18:45.620+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.619612 [debug] [Thread-2  ]: Began running node test.dbt_stock_project.not_null_stocks_date.9911f8f485
+[2025-01-13T03:18:45.621+0000] {logging_mixin.py:151} INFO - 03:18:45  1 of 2 START test accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP .. [RUN]
+[2025-01-13T03:18:45.621+0000] {eventmgr.py:62} INFO - [0m03:18:45  1 of 2 START test accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP .. [RUN]
+[2025-01-13T03:18:45.624+0000] {logging_mixin.py:151} INFO - 03:18:45  2 of 2 START test not_null_stocks_date ......................................... [RUN]
+[2025-01-13T03:18:45.624+0000] {eventmgr.py:62} INFO - [0m03:18:45.621195 [info ] [Thread-1  ]: 1 of 2 START test accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP .. [RUN]
+[2025-01-13T03:18:45.623+0000] {eventmgr.py:62} INFO - [0m03:18:45  2 of 2 START test not_null_stocks_date ......................................... [RUN]
+[2025-01-13T03:18:45.627+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.626575 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_stock-market-elt_stock_data, now test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b)
+[2025-01-13T03:18:45.627+0000] {eventmgr.py:62} INFO - [0m03:18:45.622722 [info ] [Thread-2  ]: 2 of 2 START test not_null_stocks_date ......................................... [RUN]
+[2025-01-13T03:18:45.629+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.628904 [debug] [Thread-1  ]: Began compiling node test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b
+[2025-01-13T03:18:45.632+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.631415 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.dbt_stock_project.not_null_stocks_date.9911f8f485'
+[2025-01-13T03:18:45.644+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.643943 [debug] [Thread-2  ]: Began compiling node test.dbt_stock_project.not_null_stocks_date.9911f8f485
+[2025-01-13T03:18:45.700+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.699867 [debug] [Thread-1  ]: Writing injected SQL for node "test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b"
+[2025-01-13T03:18:45.712+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.711678 [debug] [Thread-2  ]: Writing injected SQL for node "test.dbt_stock_project.not_null_stocks_date.9911f8f485"
+[2025-01-13T03:18:45.715+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.715198 [debug] [Thread-2  ]: Timing info for test.dbt_stock_project.not_null_stocks_date.9911f8f485 (compile): 03:18:45.650568 => 03:18:45.714588
+[2025-01-13T03:18:45.716+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.716482 [debug] [Thread-1  ]: Timing info for test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b (compile): 03:18:45.632701 => 03:18:45.715999
+[2025-01-13T03:18:45.718+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.718003 [debug] [Thread-2  ]: Began executing node test.dbt_stock_project.not_null_stocks_date.9911f8f485
+[2025-01-13T03:18:45.720+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.719798 [debug] [Thread-1  ]: Began executing node test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b
+[2025-01-13T03:18:45.974+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.973555 [debug] [Thread-2  ]: Writing runtime sql for node "test.dbt_stock_project.not_null_stocks_date.9911f8f485"
+[2025-01-13T03:18:45.979+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.978731 [debug] [Thread-1  ]: Writing runtime sql for node "test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b"
+[2025-01-13T03:18:45.982+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.982208 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[2025-01-13T03:18:45.984+0000] {eventmgr.py:60} DEBUG - [0m03:18:45.983567 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[2025-01-13T03:18:46.063+0000] {eventmgr.py:60} DEBUG - [0m03:18:46.062784 [debug] [Thread-2  ]: On test.dbt_stock_project.not_null_stocks_date.9911f8f485: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "default", "target_name": "dev", "node_id": "test.dbt_stock_project.not_null_stocks_date.9911f8f485"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date
+from `stock-market-elt`.`stock_data`.`stocks`
+where date is null
+
+
+
+      
+    ) dbt_internal_test
+[2025-01-13T03:18:46.064+0000] {eventmgr.py:60} DEBUG - [0m03:18:46.064317 [debug] [Thread-1  ]: On test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "default", "target_name": "dev", "node_id": "test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        symbol as value_field,
+        count(*) as n_records
+
+    from `stock-market-elt`.`stock_data`.`stocks`
+    group by symbol
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ABNB','BKNG','EXPE','TCOM','TRIP'
+)
+
+
+
+      
+    ) dbt_internal_test
+[2025-01-13T03:18:47.943+0000] {eventmgr.py:60} DEBUG - [0m03:18:47.942746 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=stock-market-elt&j=bq:US:e2323e21-16ad-4453-bb0c-6bdcee92e458&page=queryresults
+[2025-01-13T03:18:47.947+0000] {eventmgr.py:60} DEBUG - [0m03:18:47.947131 [debug] [Thread-2  ]: Timing info for test.dbt_stock_project.not_null_stocks_date.9911f8f485 (execute): 03:18:45.721140 => 03:18:47.946501
+[2025-01-13T03:18:47.949+0000] {logging_mixin.py:151} INFO - 03:18:47  2 of 2 PASS not_null_stocks_date ............................................... [PASS in 2.32s]
+[2025-01-13T03:18:47.949+0000] {eventmgr.py:62} INFO - [0m03:18:47  2 of 2 PASS not_null_stocks_date ............................................... [[32mPASS[0m in 2.32s]
+[2025-01-13T03:18:47.950+0000] {eventmgr.py:62} INFO - [0m03:18:47.949134 [info ] [Thread-2  ]: 2 of 2 PASS not_null_stocks_date ............................................... [[32mPASS[0m in 2.32s]
+[2025-01-13T03:18:47.952+0000] {eventmgr.py:60} DEBUG - [0m03:18:47.951701 [debug] [Thread-2  ]: Finished running node test.dbt_stock_project.not_null_stocks_date.9911f8f485
+[2025-01-13T03:18:48.074+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.074104 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=stock-market-elt&j=bq:US:1d393447-61bb-4025-9d5c-be11fac82bb4&page=queryresults
+[2025-01-13T03:18:48.076+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.076375 [debug] [Thread-1  ]: Timing info for test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b (execute): 03:18:45.902820 => 03:18:48.076051
+[2025-01-13T03:18:48.079+0000] {logging_mixin.py:151} INFO - 03:18:48  1 of 2 PASS accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP ........ [PASS in 2.45s]
+[2025-01-13T03:18:48.078+0000] {eventmgr.py:62} INFO - [0m03:18:48  1 of 2 PASS accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP ........ [[32mPASS[0m in 2.45s]
+[2025-01-13T03:18:48.080+0000] {eventmgr.py:62} INFO - [0m03:18:48.078348 [info ] [Thread-1  ]: 1 of 2 PASS accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP ........ [[32mPASS[0m in 2.45s]
+[2025-01-13T03:18:48.081+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.081518 [debug] [Thread-1  ]: Finished running node test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b
+[2025-01-13T03:18:48.084+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.084568 [debug] [MainThread]: Connection 'master' was properly closed.
+[2025-01-13T03:18:48.085+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.085413 [debug] [MainThread]: Connection 'test.dbt_stock_project.accepted_values_stocks_symbol__ABNB__BKNG__EXPE__TCOM__TRIP.70122eb36b' was properly closed.
+[2025-01-13T03:18:48.086+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.086172 [debug] [MainThread]: Connection 'test.dbt_stock_project.not_null_stocks_date.9911f8f485' was properly closed.
+[2025-01-13T03:18:48.087+0000] {logging_mixin.py:151} INFO - 03:18:48
+[2025-01-13T03:18:48.087+0000] {eventmgr.py:62} INFO - [0m03:18:48  
+[2025-01-13T03:18:48.088+0000] {eventmgr.py:62} INFO - [0m03:18:48.087024 [info ] [MainThread]: 
+[2025-01-13T03:18:48.089+0000] {logging_mixin.py:151} INFO - 03:18:48  Finished running 2 tests in 0 hours 0 minutes and 3.22 seconds (3.22s).
+[2025-01-13T03:18:48.089+0000] {eventmgr.py:62} INFO - [0m03:18:48  Finished running 2 tests in 0 hours 0 minutes and 3.22 seconds (3.22s).
+[2025-01-13T03:18:48.090+0000] {eventmgr.py:62} INFO - [0m03:18:48.088884 [info ] [MainThread]: Finished running 2 tests in 0 hours 0 minutes and 3.22 seconds (3.22s).
+[2025-01-13T03:18:48.091+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.091382 [debug] [MainThread]: Command end result
+[2025-01-13T03:18:48.099+0000] {logging_mixin.py:151} INFO - 03:18:48
+[2025-01-13T03:18:48.099+0000] {eventmgr.py:62} INFO - [0m03:18:48  
+[2025-01-13T03:18:48.101+0000] {eventmgr.py:62} INFO - [0m03:18:48.099547 [info ] [MainThread]: 
+[2025-01-13T03:18:48.102+0000] {logging_mixin.py:151} INFO - 03:18:48  Completed successfully
+[2025-01-13T03:18:48.102+0000] {eventmgr.py:62} INFO - [0m03:18:48  [32mCompleted successfully[0m
+[2025-01-13T03:18:48.103+0000] {eventmgr.py:62} INFO - [0m03:18:48.101720 [info ] [MainThread]: [32mCompleted successfully[0m
+[2025-01-13T03:18:48.104+0000] {logging_mixin.py:151} INFO - 03:18:48
+[2025-01-13T03:18:48.104+0000] {eventmgr.py:62} INFO - [0m03:18:48  
+[2025-01-13T03:18:48.105+0000] {eventmgr.py:62} INFO - [0m03:18:48.103760 [info ] [MainThread]: 
+[2025-01-13T03:18:48.105+0000] {logging_mixin.py:151} INFO - 03:18:48  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2025-01-13T03:18:48.105+0000] {eventmgr.py:62} INFO - [0m03:18:48  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2025-01-13T03:18:48.107+0000] {eventmgr.py:62} INFO - [0m03:18:48.105616 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[2025-01-13T03:18:48.108+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.107846 [debug] [MainThread]: Command `cli test` succeeded at 03:18:48.107718 after 3.96 seconds
+[2025-01-13T03:18:48.109+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.108732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f52eb1bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4ffb2a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2f4e577640>]}
+[2025-01-13T03:18:48.109+0000] {eventmgr.py:60} DEBUG - [0m03:18:48.109636 [debug] [MainThread]: Flushing usage events
+[2025-01-13T03:18:48.791+0000] {local.py:86} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v9.json is above dbt-ol supported version 7. This might cause errors.
+[2025-01-13T03:18:48.802+0000] {local.py:494} INFO - Inlets: [Dataset(uri='bigquery/stock-market-elt.stock_data.stocks', extra=None)]
+[2025-01-13T03:18:48.802+0000] {local.py:495} INFO - Outlets: []
+[2025-01-13T03:18:48.803+0000] {local.py:595} INFO - Assigning inlets/outlets without DatasetAlias
+[2025-01-13T03:18:48.803+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-01-13T03:18:48.834+0000] {dag.py:3677} INFO - Setting next_dagrun for PolygonAPI_to_BigQuery to 2025-01-13T00:00:00+00:00, run_after=2025-01-14T00:00:00+00:00
+[2025-01-13T03:18:48.886+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=PolygonAPI_to_BigQuery, task_id=dbt_transformation.stocks.test, execution_date=20250113T031641, start_date=20250113T031840, end_date=20250113T031848
+[2025-01-13T03:18:48.956+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-01-13T03:18:48.977+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

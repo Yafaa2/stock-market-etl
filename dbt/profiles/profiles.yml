@@ -1,0 +1,11 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: stock-market-elt
+      dataset: stock_data
+      keyfile: /opt/airflow/stock-market-elt-key.json
+      threads: 4
+      timeout_seconds: 300

@@ -1,0 +1,35 @@
+[2025-01-08T00:29:07.643+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run scheduled__2025-01-07T00:00:00+00:00 [queued]>
+[2025-01-08T00:29:07.672+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run scheduled__2025-01-07T00:00:00+00:00 [queued]>
+[2025-01-08T00:29:07.673+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-08T00:29:07.674+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2025-01-08T00:29:07.675+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-08T00:29:07.719+0000] {taskinstance.py:1300} INFO - Executing <Task(DbtRunLocalOperator): dbt_transformation.stocks.stocks_run> on 2025-01-07 00:00:00+00:00
+[2025-01-08T00:29:07.727+0000] {standard_task_runner.py:55} INFO - Started process 777 to run task
+[2025-01-08T00:29:07.733+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'dbt_transformation.stocks.stocks_run', 'scheduled__2025-01-07T00:00:00+00:00', '--job-id', '530', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmpmcu7wx54']
+[2025-01-08T00:29:07.734+0000] {standard_task_runner.py:83} INFO - Job 530: Subtask dbt_transformation.stocks.stocks_run
+[2025-01-08T00:29:07.852+0000] {task_command.py:388} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.dbt_transformation.stocks.stocks_run scheduled__2025-01-07T00:00:00+00:00 [running]> on host c502e6799a79
+[2025-01-08T00:29:07.975+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=PolygonAPI_to_BigQuery
+AIRFLOW_CTX_TASK_ID=dbt_transformation.stocks.stocks_run
+AIRFLOW_CTX_EXECUTION_DATE=2025-01-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-01-07T00:00:00+00:00
+[2025-01-08T00:29:07.979+0000] {log.py:232} WARNING - [[34m2025-01-08 00:29:07,978[0m] {[34mlocal.py:[0m146} INFO[0m - [33m(astronomer-cosmos)[0m - Cloning project to writable temp directory /tmp/tmpfc70_ru5 from /opt/***/dbt/dbt_stock_project[0m
+[2025-01-08T00:29:08.798+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 282, in execute
+    result = self.build_and_run_cmd(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 194, in build_and_run_cmd
+    return self.run_command(cmd=dbt_cmd, env=env, context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/cosmos/operators/local.py", line 165, in run_command
+    with self.profile_config.ensure_profile() as (profile_path, env_vars):
+  File "/usr/local/lib/python3.7/contextlib.py", line 114, in __enter__
+    raise RuntimeError("generator didn't yield") from None
+RuntimeError: generator didn't yield
+[2025-01-08T00:29:08.810+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=PolygonAPI_to_BigQuery, task_id=dbt_transformation.stocks.stocks_run, execution_date=20250107T000000, start_date=20250108T002907, end_date=20250108T002908
+[2025-01-08T00:29:08.829+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 530 for task dbt_transformation.stocks.stocks_run (generator didn't yield; 777)
+[2025-01-08T00:29:08.867+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-01-08T00:29:08.923+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,2 @@
+[2024-12-03T12:57:03.742+0000] {taskinstance.py:1077} INFO - Dependencies not met for <TaskInstance: PolygonAPI_to_BigQuery.sync_polygon_data scheduled__2024-12-03T04:00:00+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
+[2024-12-03T12:57:03.745+0000] {local_task_job.py:147} INFO - Task is not able to be run

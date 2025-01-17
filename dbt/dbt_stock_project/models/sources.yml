@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: stock_market_data
+    description: "Raw stock market data extracted from the Polygon API"
+    schema: stock_data
+    tables:
+      - name: airbnb_stock_data_results
+        description: "Raw stock market data for Airbnb from the Polygon API."
+        
+      - name: booking_stock_data_results
+        description: "Raw stock market data for Booking from the Polygon API."
+        
+      - name: expedia_stock_data_results
+        description: "Raw stock market data for Expedia from the Polygon API."
+        
+      - name: trip_com_stock_data_results
+        description: "Raw stock market data for Tripcom from the Polygon API."
+        
+      - name: tripadvisor_stock_data_results
+        description: "Raw stock market data for TripAdvisor from the Polygon API."

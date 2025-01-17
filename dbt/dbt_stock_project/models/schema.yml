@@ -1,0 +1,41 @@
+
+version: 2
+
+models:
+  - name: stocks
+    description: '{{ doc("table_description") }}'
+
+    columns:
+      - name: symbol
+        tests:
+          - accepted_values:
+              values: ['ABNB','BKNG','EXPE','TCOM','TRIP']
+        description: "The stock ticker's symbol (e.g., Airbnb, Booking)."
+
+      - name: date
+        tests:
+          - not_null
+        description: "The date for the start of the aggregate window."
+
+      - name: open
+        description: "The open price for the symbol in the given time period."
+
+      - name: close
+        description: "The close price for the symbol in the given time period."
+
+      - name: high
+        description: "The highest price for the symbol in the given time period."
+
+      - name: low
+        description: "The lowest price for the symbol in the given time period."
+
+      - name: volume
+        description: "The trading volume of the symbol in the given time period."
+
+      - name: volume_average
+        description: "The volume-weighted average price."
+        
+      - name: number_of_transactions
+        description: "The number of transactions in the aggregate window."
+
+
