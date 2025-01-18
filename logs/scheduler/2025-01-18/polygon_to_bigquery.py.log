@@ -1007,3 +1007,39 @@ Please take a look at these docs to improve your DAG import time:
 [2025-01-18T13:51:27.508+0000] {logging_mixin.py:151} INFO - [2025-01-18T13:51:27.508+0000] {dag.py:2907} INFO - Sync 1 DAGs
 [2025-01-18T13:51:27.528+0000] {logging_mixin.py:151} INFO - [2025-01-18T13:51:27.528+0000] {dag.py:3677} INFO - Setting next_dagrun for PolygonAPI_to_BigQuery to 2025-01-18T00:00:00+00:00, run_after=2025-01-19T00:00:00+00:00
 [2025-01-18T13:51:27.554+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/polygon_to_bigquery.py took 0.308 seconds
+[2025-01-18T15:08:45.041+0000] {processor.py:157} INFO - Started process (PID=16155) to work on /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:08:45.042+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/polygon_to_bigquery.py for tasks to queue
+[2025-01-18T15:08:45.044+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.044+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:08:45.073+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.073+0000] {graph.py:502} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation...
+[2025-01-18T15:08:45.294+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.293+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation for current version: 0.2066334499995719
+[2025-01-18T15:08:45.294+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.294+0000] {graph.py:529} INFO - Cosmos performance: Cache miss for cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation - skipped
+[2025-01-18T15:08:45.295+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.295+0000] {graph.py:560} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_stock_project` using dbt ls...
+[2025-01-18T15:08:45.299+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.299+0000] {graph.py:579} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/PolygonAPI_to_BigQuery__dbt_transformation/target/partial_parse.msgpack
+[2025-01-18T15:08:45.304+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.304+0000] {config.py:342} INFO - Using user-supplied profiles.yml at /opt/airflow/dbt/profiles/profiles.yml
+[2025-01-18T15:08:45.306+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.306+0000] {project.py:36} INFO - Project /opt/airflow/dbt/dbt_stock_project does not have {'packages.yml', 'dependencies.yml'}
+[2025-01-18T15:08:45.306+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:45.306+0000] {graph.py:164} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmpdxox3sa0 --profiles-dir /opt/airflow/dbt/profiles --profile default --target dev`
+[2025-01-18T15:08:50.909+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.908+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation for current version: 0.14953487899947504
+[2025-01-18T15:08:50.914+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.913+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-01-18T15:08:50.920+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.920+0000] {graph.py:444} INFO - Total nodes: 8
+[2025-01-18T15:08:50.921+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.921+0000] {graph.py:445} INFO - Total filtered nodes: 8
+[2025-01-18T15:08:50.922+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.922+0000] {converter.py:265} INFO - Cosmos performance (PolygonAPI_to_BigQuery__dbt_transformation) -  [09297a4a3d23|16155]: It took 5.85s to parse the dbt project for DAG using LoadMode.DBT_LS
+[2025-01-18T15:08:50.927+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.927+0000] {converter.py:309} INFO - Cosmos performance (PolygonAPI_to_BigQuery__dbt_transformation) - [09297a4a3d23|16155]: It took 0.00553s to build the Airflow DAG.
+[2025-01-18T15:08:50.929+0000] {processor.py:839} INFO - DAG(s) dict_keys(['PolygonAPI_to_BigQuery']) retrieved from /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:08:50.941+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.941+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-01-18T15:08:50.964+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:08:50.964+0000] {dag.py:3677} INFO - Setting next_dagrun for PolygonAPI_to_BigQuery to 2025-01-18T00:00:00+00:00, run_after=2025-01-19T00:00:00+00:00
+[2025-01-18T15:08:50.982+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/polygon_to_bigquery.py took 5.945 seconds
+[2025-01-18T15:09:21.820+0000] {processor.py:157} INFO - Started process (PID=16281) to work on /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:09:21.821+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/polygon_to_bigquery.py for tasks to queue
+[2025-01-18T15:09:21.824+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:21.823+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:09:21.845+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:21.845+0000] {graph.py:502} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation...
+[2025-01-18T15:09:22.007+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.007+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation for current version: 0.14968459300052928
+[2025-01-18T15:09:22.007+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.007+0000] {graph.py:519} INFO - Cosmos performance [09297a4a3d23|16281]: The cache size for cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation is 3933
+[2025-01-18T15:09:22.008+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.008+0000] {graph.py:527} INFO - Cosmos performance: Cache hit for cosmos_cache__PolygonAPI_to_BigQuery__dbt_transformation - c95360fdf93438bbae376b0a6e74e4eb,d41d8cd98f00b204e9800998ecf8427e
+[2025-01-18T15:09:22.008+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.008+0000] {graph.py:444} INFO - Total nodes: 8
+[2025-01-18T15:09:22.009+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.009+0000] {graph.py:445} INFO - Total filtered nodes: 8
+[2025-01-18T15:09:22.009+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.009+0000] {converter.py:265} INFO - Cosmos performance (PolygonAPI_to_BigQuery__dbt_transformation) -  [09297a4a3d23|16281]: It took 0.164s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2025-01-18T15:09:22.013+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.013+0000] {converter.py:309} INFO - Cosmos performance (PolygonAPI_to_BigQuery__dbt_transformation) - [09297a4a3d23|16281]: It took 0.0038s to build the Airflow DAG.
+[2025-01-18T15:09:22.014+0000] {processor.py:839} INFO - DAG(s) dict_keys(['PolygonAPI_to_BigQuery']) retrieved from /opt/airflow/dags/polygon_to_bigquery.py
+[2025-01-18T15:09:22.029+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.029+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-01-18T15:09:22.051+0000] {logging_mixin.py:151} INFO - [2025-01-18T15:09:22.050+0000] {dag.py:3677} INFO - Setting next_dagrun for PolygonAPI_to_BigQuery to 2025-01-18T00:00:00+00:00, run_after=2025-01-19T00:00:00+00:00
+[2025-01-18T15:09:22.068+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/polygon_to_bigquery.py took 0.250 seconds
