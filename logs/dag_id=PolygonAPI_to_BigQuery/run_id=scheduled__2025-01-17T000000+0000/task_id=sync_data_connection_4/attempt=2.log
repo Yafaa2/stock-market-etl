@@ -1,0 +1,12 @@
+[2025-01-18T00:21:17.380+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_4 scheduled__2025-01-17T00:00:00+00:00 [queued]>
+[2025-01-18T00:21:17.404+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_4 scheduled__2025-01-17T00:00:00+00:00 [queued]>
+[2025-01-18T00:21:17.405+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2025-01-18T00:21:17.446+0000] {taskinstance.py:1382} INFO - Executing <Task(AirbyteTriggerSyncOperator): sync_data_connection_4> on 2025-01-17 00:00:00+00:00
+[2025-01-18T00:21:17.456+0000] {standard_task_runner.py:57} INFO - Started process 93 to run task
+[2025-01-18T00:21:17.464+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'PolygonAPI_to_BigQuery', 'sync_data_connection_4', 'scheduled__2025-01-17T00:00:00+00:00', '--job-id', '448', '--raw', '--subdir', 'DAGS_FOLDER/polygon_to_bigquery.py', '--cfg-path', '/tmp/tmptl8smpxo']
+[2025-01-18T00:21:17.472+0000] {standard_task_runner.py:85} INFO - Job 448: Subtask sync_data_connection_4
+[2025-01-18T00:21:17.571+0000] {task_command.py:415} INFO - Running <TaskInstance: PolygonAPI_to_BigQuery.sync_data_connection_4 scheduled__2025-01-17T00:00:00+00:00 [running]> on host a7a323ab681c
+[2025-01-18T00:21:18.181+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='PolygonAPI_to_BigQuery' AIRFLOW_CTX_TASK_ID='sync_data_connection_4' AIRFLOW_CTX_EXECUTION_DATE='2025-01-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-17T00:00:00+00:00'
+[2025-01-18T00:21:18.201+0000] {base.py:73} INFO - Using connection ID 'airbyte_to_bigquery' for task execution.
+[2025-01-18T00:21:20.460+0000] {airbyte.py:95} INFO - Job 381 was submitted to Airbyte Server
+[2025-01-18T00:21:20.461+0000] {airbyte.py:97} INFO - Waiting for job 381 to complete
